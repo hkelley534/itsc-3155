@@ -1,14 +1,14 @@
+def make_invoice():
+    item_num = int(input("Number of items: "))
+    invoice = []
+    for x in range(item_num):
+        invoice.append(input("Input item and price: "))
+    return invoice
 
-def sort_invoice(invoice):
-    sorted_invoice = []
-    for item in invoice:
-        sorted_invoice.append(x)
-        print()
-        
+def price(x):
+    item = x.split(" ") 
+    return item[1]    
 
-item_num = int(input("Number of items: "))
-invoice = []
-for x in range(item_num):
-    invoice.append(input("Input item and price: "))
+invoice = make_invoice()
+invoice.sort(key=price)
 print(invoice)
-sort_invoice(invoice)
